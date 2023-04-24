@@ -1,4 +1,4 @@
-FROM node:12-slim
+FROM node:slim
 
 LABEL version="1.0.0"
 LABEL repository="http://github.com/mikeal/merge-release"
