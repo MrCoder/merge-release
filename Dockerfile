@@ -10,6 +10,8 @@ LABEL com.github.actions.description="Release npm package based on commit metada
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 
+RUN sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
+
 RUN apt-get update && apt-get -y --no-install-recommends install git jq findutils curl ca-certificates && rm -rf /var/lib/apt/lists/*
 
 COPY . .
